@@ -1,0 +1,91 @@
+@import (reference) "./mixin.less";
+
+.kc_header{
+    width: 100%;
+    height: 88px;
+    line-height: 88px;
+    background: #fff;
+    border-top: 1px solid #b6b4b6;
+    border-bottom: 1px solid #b6b4b6;
+    .kc_head{
+        width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+        padding-right: 35px;
+        a{
+            color: @font-color;
+            margin-left: 35px;
+        }
+        a h1{
+            width: 100px;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+        a:hover{
+            color: #1890ff; 
+        }
+        .ant-dropdown-trigger{
+            .anticon-down{
+                margin-left: 13px;
+            }
+        }
+        .kc_login{
+            float: right;
+            line-height: 88px;
+            display: inline-block;
+            &>div{
+                float: left;
+            }
+            .country{
+                img{
+                    width: 18px;
+                    height: 18px;
+                }
+                display: none;
+                margin-left: 20px;
+            }
+            .kc_allogin{
+                &>span{
+                    float: left;
+                }
+                 .kc_user{
+                    display: inline-block;
+                    max-width: 90px;
+                    height: 88px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    color: #000;
+                  }
+                  .icon{
+                    cursor: pointer;
+                    color: #000;
+                    font-size: 18px;
+                    margin-left: 25px;
+                    font-weight: bold;
+                    &:hover{
+                        color: #1890ff;
+                        transition:  all 0.5s;
+                    };
+                  }
+            }
+           
+        }
+    }
+}
+.ant-dropdown{
+    .kc_langbtn {
+        .ant-dropdown-menu-item{
+            padding-left: 8px;
+            padding-right: 8px;
+            img{
+                vertical-align: middle;
+                margin-right: 3px;
+            }
+            span{
+                vertical-align: middle;
+            }
+        }
+    }
+}

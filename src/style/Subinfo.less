@@ -1,0 +1,113 @@
+.kc_subrecord{
+    .ant-table-wrapper{
+        .ant-table-row {
+            cursor: pointer;
+           }  
+      }
+}
+.kc_subscription{
+    .kc_transferto{
+        .kc_subinfo{
+            width: 70%;
+            margin: 0 auto;
+            h3{
+                text-align: center;
+            }
+            p{
+                &:after{
+                    content: "";
+                    display: block;
+                    clear: both;
+                };
+                &>span:nth-child(2){
+                    float: right;
+                    color: #000;
+                }
+                .kc_strong{
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #000;
+                }
+            }
+            /*二维码*/
+            .subinfo_form .addr_img{
+                padding: 5px 15px 15px 15px;
+                 width: 157px;
+                height: 157px;
+                text-align: center;
+                margin: 25px auto;
+                cursor: pointer;
+                canvas{
+                   display: block;
+                   width: 157px !important;
+                   height: 157px !important; 
+                }
+            }
+           .kc_foot{
+                width: 60%;
+                margin: 0 auto;
+                margin-top: 50px;
+                display: flex;
+                justify-content: space-between;
+                .ant-btn{
+                    width: 35%;
+                }
+           }  
+         
+        }
+
+    }
+    .kc_spin{
+        text-align: center;
+    }
+}
+.kc_subform{
+    .ant-form{
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 30px;
+        .ant-form-item-required:before{
+            content: "";
+           }  
+           .ant-btn{
+              width: 50%;
+              margin: 0 auto;
+              margin-top: 30px;
+              display: block;
+           }
+    }
+    .qrcodeImg {
+    .qrcodeAddr{
+        font-size: 14px;
+        font-weight: bold;
+        display: inline-block;
+        width: 145px;
+        height: 50px;
+        line-height: 50px;
+        color: #232a34;
+    }
+    .ant-form-item-control{
+        width: 100%;
+        height: 100px;
+        color: #d8d8d8!important;
+         border:1px solid #d9d9d9;
+         border-radius: 4px;
+    }
+     .avatar{
+        width: 100%;
+        height: 100px;
+        cursor: pointer;
+    }
+    .ant-upload.ant-upload-select{
+        width: 100%;
+    }
+    .avatar-uploader-trigger{
+        width: 100%;
+        font-size: 32px;
+        line-height: 100px;
+        cursor: pointer;
+    }
+
+}
+
+}

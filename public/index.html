@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="theme-color" content="#000000">
+     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/logo.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/logo.ico">
+   <!--   <link rel="shortcut icon" href="%PUBLIC_URL%/logo.ico">
+    <link href="logo.ico" mce_href="logo.ico" rel="icon"> -->
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>FADAX</title>
+    <script type="text/javascript">
+      //设定Mobile的定义(全小写)
+      var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
+      //读取用户的浏览器资料
+      var browser = navigator.userAgent.toLowerCase();
+      var isMobile = false;
+
+      //检查开始
+      for (var i=0; i<mobileAgent.length; i++){
+        if (browser.indexOf(mobileAgent[i])!=-1){
+          //注册跳转m站注册 其他跳转首页
+          var qs = (function(a) {
+            if (a == "") return {};
+            var b = {};
+            for (var i = 0; i < a.length; ++i) {
+              var p = a[i].split('=');
+              if (p.length != 2) continue;
+              b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+            }
+            return b;
+          })(window.location.search.substr(1).split('&'));
+
+          if (qs["i"]) {
+            sessionStorage.setItem("inviteCode", qs["i"])
+          }
+          if(window.location.href.search("register") != -1) {
+            if(qs["i"])
+              location.href = 'https://www.bit591.io/kuangfront/emailregister?i=' + qs["i"];
+            else
+              location.href = 'https://www.bit591.io/kuangfront/emailregister';
+          } else {
+            location.href = 'https://www.bit591.io/kuangfront/finance';
+          }
+          break;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+  <script>  
+  (function(){  
+    //foot position
+    // var windheight =window.innerHeight;
+    //      console.log(windheight)
+
+    // var otcfooter = document.getElementById("otc_footer");
+    // var resize=function(){
+    //    document.documentElement.style.fontSize = Math.min(640, Math.max(document.documentElement.clientWidth, 375)) / 375 * 10 + 'px';
+    //  };  
+    //    window.addEventListener ? window.addEventListener('resize', resize) : window.attachEvent('resize', resize);  
+    //     resize();  
+    //     window.onresize=function(){
+    //        var docheight = window.innerHeight; 
+    //        console.log("docheight..........."+docheight)
+    //      console.log("windheight..........."+windheight)
+    //      // alert(windheight)
+    //      if(otcfooter){
+    //         if(docheight < windheight){            
+    //           otcfooter.style.position = 'relative';
+    //       }else{
+    //           otcfooter.style.position = 'fixed';
+    //       }     
+    //      }   
+    //     };
+        //Tao_container 最小高度
+     //  var resize=function(){
+     //    var clientHeight = document.documentElement.clientHeight;
+     //    var Login_box = document.getElementsByClassName("login_box")[0];
+     //    Login_box.style.minHeight = (clientHeight -65.19)+ "px";
+     //    console.log(clientHeight)
+     //    console.log(Login_box)
+     // };  
+     //   window.addEventListener ? window.addEventListener('resize', resize) : window.attachEvent('resize', resize);  
+     //   resize(); 
+       
+  })();  
+</script>  
+</html>

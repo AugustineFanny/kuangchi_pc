@@ -1,0 +1,62 @@
+.kc_account{
+    width: 100%;
+    &:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .kc_amount{
+        width: 50%;
+        height: 130px;
+        padding: 0 13px;
+        box-sizing: border-box;
+        float: left;
+        &>div{
+            width: 100%;
+            height: 100%;
+            background: #eee;
+            border-radius: 6px;
+            position: relative;
+            padding: 20px 0 0 20px;
+            color: #fff;
+            h3{
+                color: #fff;
+            }
+            .kc_line{
+                width: 25px;
+                height: 1px;
+                margin: 10px 0 15px;
+                overflow: hidden;
+                background: rgba(255,255,255,0.3);
+            }
+            .kc_num{
+                height: 30px;
+                line-height: 30px;
+                font-size: 25px;
+                width: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            .icon{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+        &:nth-child(1)>div{
+               background: linear-gradient(to right, #3bd1bf 0%,#129cd2 100%);
+            }
+        &:nth-child(2)>div{
+           background: linear-gradient(to right, #ffc411 0%,#ff875e 100%);
+        }
+       
+    }
+     #kc_profit1>div{
+           background: linear-gradient(to right, #ff875e 0%,#fe6d9f 100%);
+        }
+        #kc_profit2>div{
+           background: linear-gradient(to right, #ee70e9 0%,#8363f9 100%);
+        }
+     
+}
